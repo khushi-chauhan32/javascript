@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quotes.generator</title>
+</head>
+
+<body style= " width: 100%; height: 500px; ;">
+    <button id="generator">Click</button>
+    <h2 id="quotes"></h2>
+    <p id="author"></p>
+    <script>
+        const quote = function () {
+            const quotes = [
+                {
+                    quote: "'To live is the rarest thing in the world. Most people exist, that is all.'",
+                    author: "Oscar Wilde"
+                },
+                {
+                    quote: "'That it will never come again is what makes life so sweet.' ",
+                    author: "Emily Dickinson"
+                },
+                {
+                    quote: "'It is never too late to be what you might have been.' ",
+                    author: "George Eliot"
+                },
+                {
+                    quote: "'To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.'",
+                    author: "Ralph Waldo Emerson"
+                },
+                {
+                    quote: "'Pain is inevitable. Suffering is optional.'",
+                    author: " Haruki Murakami"
+                },
+                {
+                    quote: "'All the world's a stage, and all the men and women merely players.' ",
+                    author: "William Shakespeare"
+                },
+                {
+                    quote: "'Be kind, for everyone you meet is fighting a hard battle.'",
+                    author: "Plato shifa fatima"
+                },
+            ];
+            let arrayIndex = Math.floor(Math.random() * quotes.length);
+
+            document.getElementById("quotes").innerHTML = quotes[arrayIndex].quote;
+            document.getElementById("author").innerHTML = quotes[arrayIndex].author;
+        }
+
+        window.onload = function(){
+            quote();
+            document.getElementById("generator").addEventListener("click",quote);
+        }
+    </script>
+</body>
+</html>

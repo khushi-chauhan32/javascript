@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object array</title>
+</head>
+<body>
+    <h2 id="name"></h2>
+    <h2 id="email"></h2>
+    <h2 id="password"></h2>
+    <h2 id="contry"></h2>
+    <h2 id="state"></h2>
+    <h2 id="city"></h2>
+
+
+    <script >
+        let obj = {
+            name:"khushi",
+            gmail:"khushirc hauhan32@gmail.com",
+            password:"khushi880",
+            contry:{
+                country:"india",
+                state:"gujrat",
+                city:["surat","vadodara","ahemdabad"]
+            }
+        }
+        document.getElementById("name").innerHTML =`NAME:-${obj.name}`;
+        document.getElementById("email").innerHTML =`EMAIL:-${obj.gmail}`;
+        document.getElementById("password").innerHTML =`PASSWORD:-${obj.password}`;
+        document.getElementById("contry").innerHTML =`CONTRY:-${obj.contry.contry}`;
+        document.getElementById("state").innerHTML =`STATE:-${obj.contry.state}`;
+        document.getElementById("city").innerHTML =`CITY:-${obj.contry.city}`;
+        
+
+    </script>
+</body>
+</html>

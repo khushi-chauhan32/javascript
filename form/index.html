@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <div align="center">
+        <h1>Form</h1>
+        <form action="">
+            <table border="1">
+                <tr>
+                    <td>NAME:- </td>
+                    <td><input type="text" id="name"></td>
+                </tr>
+                <tr>
+                    <td>PHONE:- </td>
+                    <td><input type="text" id="number"></td>
+                </tr>
+                <tr>
+                    <td>GMAIL:-</td>
+                    <td><input type="text" id="gmail"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="button"  onclick="saverecord()" value="submit"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+<script>
+
+    function  saverecord(){
+        let name = document.getElementById('name').value;
+        let phone = document.getElementById('number').value;
+        let gamil = document.getElementById('gmail').value;
+        if(!name){
+            alert("name is required");
+            return false;
+        }
+        if(!phone){
+            alert("phone is required");
+            return false;
+        }
+        if(!gmail){
+            alert("gamil is required");
+            return false;
+        }
+        console.log(name);
+        console.log(phone);
+        console.log(gmail);
+    }
+
+</script>
+</html>

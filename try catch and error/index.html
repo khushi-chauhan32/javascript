@@ -1,0 +1,17 @@
+<script type="text/javascript">
+    try{
+        let x = parseInt(prompt("enter the number of x:-")); 
+        let y = parseInt(prompt("enter the number of y:-"));
+        let ans = x/y;
+
+        if(y==0){
+            throw "can not divide by 0";
+        }else{
+            console.log(`ANS:${ans}`);
+        }
+        
+     } catch(err){
+            console.log(err);
+        }
+    
+</script>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object with table</title>
+   
+</head>
+
+<body>
+    <table align="center" border="1" style="margin-top: 50px; box-shadow: 0 0 2px 3px rgb(159, 159, 159); background-color:#C6DEFF; width: 600px;height:350px; text-align:center ;">
+        <thead >
+            <tr>
+                <td  style="padding: 15px;">SRNO</td>
+                <td>GRNO</td>
+                <td>NAME</td>
+                <td>COURSE</td>
+            </tr>
+        </thead>
+        <tbody id="data"></tbody>
+    </table>
+</body>
+
+<script type="text/javascript">
+    let record = [
+        {
+            grno: "7210",
+            name: "Khushi",
+            course: "Fullstack"
+        },
+        {
+            grno: "5471",
+            name: "Neha",
+            course: "Fullstack"
+        },
+        {
+            grno: "4326",
+            name: "Janavi",
+            course: "Fullstack"
+        },
+        {
+            grno: "6020",
+            name: "Kunjal",
+            course: "Fullstack"
+        },
+        {
+            grno: "7214",
+            name: "Brijal",
+            course: "Fullstack"
+        }
+    ]
+
+    let tbl = "";
+    record.map((val, index) => {
+        tbl += `
+
+                <tr>
+                    <td>${++index}</td>
+                    <td>${val.grno}</td>
+                    <td>${val.name}</td>
+                    <td>${val.course}</td>
+                    
+                `
+
+    })
+    
+  document.getElementById('data').innerHTML=tbl;  
+    
+</script>
+</html>
